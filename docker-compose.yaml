@@ -1,0 +1,11 @@
+# https://github.com/Paperspace/jupyter-docker-stacks/tree/master/scipy-notebook
+
+version: '3'
+services:
+  jupyter-scipy-notebook:
+    image: "jupyter/scipy-notebook:17aba6048f44"
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/
+    command: start.sh jupyter lab --NotebookApp.token=''
