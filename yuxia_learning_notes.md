@@ -1,11 +1,18 @@
 # Python Learning
 
+
+
+https://github.com/jizusun/python-learning
+
+
+
 https://www.linkedin.com/learning/python-programming-efficiently/install-anaconda-python-distribution?u=57692769
 
 
 
 - shift+enter: execute
-- 
+
+  
 
 https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/introduction-to-the-data-professions?u=57692769
 
@@ -77,7 +84,6 @@ Pandas
 
 - A set of square-brackets[...]
 - The .loc[] indexer
-- 
 
 ### Data Preparation Basics
 
@@ -103,8 +109,6 @@ series_obj['row 1', 'row 5', 'row 8'] = 8
 series_obj
 ```
 
-
-
 - Treating missing values
 
   NaN : Not a Number
@@ -120,9 +124,46 @@ series_obj
 
 - Filling in for missing values  
 
-  
+```python
+np.random.seed(25)
+DF_obj = DataFrame(np.random.rand(36).reshape(6,6))
+DF_obj
 
-  - ### Filling in for missing values
+DF_obj.loc[3:5, 0] = missing
+DF_obj.loc[1:4, 5] = missing
+DF_obj
+
+filled_DF = DF_obj.fillna(0)
+filled_DF
+
+fill_DF = DF_obj.fillna(method='ffill')
+fill_DF
+```
+
+- Counting missing values
+
+```python
+np.random.seed(25)
+DF_obj = DataFrame(np.random.rand(36).reshape(6,6))
+DF_obj.loc[3:5, 0] = missing
+DF_obj.loc[1:4, 5] = missing
+DF_obj
+
+DF_obj.isnull().sum()
+
+```
+
+- Filtering out missing values
+
+```python
+DF_no_NaN = DF_obj.dropna()
+DF_no_NaN
+
+DF_no_NaN = DF_obj.dropna(axis=1)
+DF_no_NaN
+```
+
+
 
 ### Data Visualization 101 
 
