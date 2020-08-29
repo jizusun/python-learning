@@ -7,11 +7,7 @@ https://www.linkedin.com/learning/python-programming-efficiently/install-anacond
 - shift+enter: execute
 - 
 
-
-
 https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/introduction-to-the-data-professions?u=57692769
-
-
 
 - Python3.6 
 
@@ -32,8 +28,6 @@ Course Roadmap
 - Basic Math and Satistics
 - Data Sourcing via Web Scraping
 - Building Collaborative Analytics plotly
-
-
 
 
 
@@ -84,3 +78,69 @@ Pandas
 - A set of square-brackets[...]
 - The .loc[] indexer
 - 
+
+### Data Preparation Basics
+
+- Filtering and Selecting
+
+```python
+series_obj = Series(np.arange(8), index = ['row 1', 'row 2', 'row 3',  'row 4',  'row 5',  'row 6',  'row 7',  'row 8'])
+series_obj
+
+DF_obj.loc[['row 2', 'row 5'], ['column 5', 'column 2']]
+
+series_obj['row 7']
+
+series_obj[[0, 7]]
+
+series_obj['row 3': 'row 7']
+
+DF_obj < .2
+
+series_obj[series_obj > 6]
+
+series_obj['row 1', 'row 5', 'row 8'] = 8
+series_obj
+```
+
+
+
+- Treating missing values
+
+  NaN : Not a Number
+
+  - Figuring out what data is missing
+
+  ```python
+  missing = np.nan
+  series_obj = Series(['row 1', 'row 2', missing, 'row 4', 'row 5', 'row 6', missing, 'row 8'])
+  series_obj
+  series_obj.isnull()
+  ```
+
+- Filling in for missing values  
+
+  
+
+  - ### Filling in for missing values
+
+### Data Visualization 101 
+
+### Practical Data Visualization
+
+### Basic Math and Statistics 
+
+### Data Sourcing via Web Scraping
+
+### Collaborative Analysis with Plotly
+
+
+
+
+
+
+
+
+
+
+
